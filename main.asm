@@ -9,7 +9,6 @@
 .equ outloop = 30000
 .equ inloop = 5
 .org 0x00
-; Replace with your application code
 
 main:
 	ldi r16,(1<<ddb5)
