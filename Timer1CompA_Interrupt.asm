@@ -4,9 +4,9 @@
 ; Created: 9/2/2021 9:07:33 AM
 ; Author : Aman Kumar Singh
 ;
-
+;8 Mhz Clock
 .include "m328Pdef.inc"
-.equ OCRval = 64000
+.equ OCRval = 31249 ; 1 Second Delay
 .org 0x00 
 	jmp setup
 .org 0x0E
@@ -15,7 +15,7 @@
 setup:
 	ldi r16,((1<<wgm12)|(1<<com1a0))
 	sts tccr1a,r16
-	ldi r16,(1<<cs10)|(1<<cs11)
+	ldi r16,(1<<cs12)
 	sts tccr1b,r16
 	ldi r16,HIGH(OCRval)
 	sts ocr1ah,r16
@@ -36,4 +36,3 @@ tim1comp:
 	eor r16,r17
 	out portb,r16
 	reti
-	
