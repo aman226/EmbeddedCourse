@@ -1,2 +1,2 @@
 # EmbeddedCourse
-Assembly Codes Made during my Embedded Course
+Codes Made during my Embedded Course
